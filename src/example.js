@@ -16,5 +16,6 @@ Vue.use(pinger, {
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  template: '<App/>',
+  components: { App }
 })
