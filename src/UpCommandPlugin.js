@@ -1,6 +1,6 @@
-let UpCommandPlugin = {}
+var UpCommandPlugin = {}
 UpCommandPlugin.install = function(vue, options) {
-  let payload = {
+  var payload = {
     status: 'init',
     keepAlive: function() { }
   }
@@ -16,12 +16,12 @@ UpCommandPlugin.install = function(vue, options) {
   }
 
   function debounce(callback, timeout, _this) {
-      let counter = 0
-      let timer
+      var counter = 0
+      var timer
 
-      let interval = {isActive: false, timer: null}
+      var interval = {isActive: false, timer: null}
       return function(e) {
-          let _that = this
+          var _that = this
 
           payload.status = 'running'
           options.restartCallback(payload)
