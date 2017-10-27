@@ -50,10 +50,10 @@ UpCommandPlugin.install = function(vue, options) {
   payload.keepAlive = userAction
 
   vue.mixin({
-    beforeCreate() {
+    beforeCreate: function() {
       vue.util.defineReactive(this, '$amitUpCommand', payload)
     },
-    mounted() {
+    mounted: function() {
       this.$el.addEventListener("mousemove", userAction, false)
       this.$el.addEventListener("click", userAction, false)
       this.$el.addEventListener("scroll", userAction, false)
