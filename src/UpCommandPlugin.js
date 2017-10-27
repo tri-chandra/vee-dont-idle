@@ -7,11 +7,11 @@ UpCommandPlugin.install = function(vue, options) {
 
   if (!options) {
     options = {
-      restartCallback(payload) {},
-      periodicCallback(payload) {},  //TODO: if ping result in time out, dispose UI
+      restartCallback: function(payload) {},
+      periodicCallback: function(payload) {},  //TODO: if ping result in time out, dispose UI
       interval: 3000,
       stopTime: 10000,  //TODO: set to 10 mins?
-      stoppedCallback(payload) {} //TODO: additional idea, cover the screen, click something to continue session?
+      stoppedCallback: function(payload) {} //TODO: additional idea, cover the screen, click something to continue session?
     }
   }
 
